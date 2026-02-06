@@ -1,23 +1,47 @@
 .toast {
   position: fixed;
   bottom: 50px;
-  right: 50px;
+  right: 100px;
   padding: 20px 30px;
   width: 300px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: white;
-  border-radius: 10px;
+  color: rgb(0, 0, 0);
+  border-radius: 20px;
   transition: opacity 0.3s;
   opacity: 1;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
-  box-shadow: 0 0px 5px rgb(155, 155, 155);
+  box-shadow: 0 0px 5px rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .fadeOut {
   opacity: 0;
+}
+
+.contentContainer {
+  padding: 0;
+  margin: 0;
+  margin-left: 50px;
+}
+
+.toastSector {
+  left: 0;
+  top: 0;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  position: absolute;
+  height: 100%;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.toastSector > img {
+  width: 35px;
+  height: 35px;
 }
 
 .toastInfo {
@@ -33,13 +57,15 @@
 }
 
 .closeButton {
-  background: white;
-  border-radius: 8px;
-  color: rgba(0, 0, 0, 0.5);
-  font-weight: bold;
-  font-size: 16px;
+  width: 20px;
+  height: 20px;
   border: none;
-  padding: 8px 16px;
   margin-left: 10px;
   cursor: pointer;
+  background: none;
+}
+
+.closeButton > img {
+  width: 20px;
+  height: 20px;
 }
