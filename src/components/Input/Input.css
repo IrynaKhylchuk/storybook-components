@@ -35,7 +35,7 @@
 
 button:disabled,
 button[disabled],
-button:disabled:hover{
+button:disabled:hover {
   cursor: auto;
   opacity: 0.3;
 }
