@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+
+import arrowUp from "../../../assets/arrow_up.svg";
+import arrowDown from "../../../assets/arrow_down.svg";
 import "./MenuItem.css";
 
 export interface MenuItem {
@@ -14,7 +17,13 @@ export const MenuItemComponent = ({ item }: { item: MenuItem }) => {
   return (
     <div className="itemsContainer">
       <button className="item" onClick={() => setOpen(!open)}>
-        {item.label} {hasSubItems && (open ? "↑" : "↓")}
+        {item.label}
+        {hasSubItems &&
+          (open ? (
+            <img src={arrowUp} alt="arrowUp" />
+          ) : (
+            <img src={arrowDown} alt="arrowDown" />
+          ))}
       </button>
 
       {hasSubItems && (

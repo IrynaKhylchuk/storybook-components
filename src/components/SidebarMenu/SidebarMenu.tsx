@@ -4,6 +4,7 @@ import type { MenuItem } from "./MenuItem/MenuItem";
 import { MenuItemComponent } from "./MenuItem/MenuItem";
 
 import menuIcon from "../../assets/menu.svg";
+import components from "../../assets/components.svg"
 import "./SidebarMenu.css";
 
 interface SidebarMenuProps {
@@ -33,6 +34,10 @@ export const SidebarMenu = ({
         onClick={closeSidebar}
       />
       <nav className={isOpen ? "sidebar active" : "sidebar"}>
+        <div className="titleContainer">
+          <img src={components} alt="logo" />
+          <h1 className="title">Storybook Components</h1>
+        </div>
         {items.map((item) => (
           <MenuItemComponent key={item.label} item={item} />
         ))}
