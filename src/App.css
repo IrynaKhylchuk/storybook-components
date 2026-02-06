@@ -1,8 +1,13 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -13,4 +18,48 @@ body {
     rgba(253, 29, 29, 1) 50%,
     rgba(252, 176, 69, 1) 100%
   );
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 350px;
+  border-radius: 10px;
+  padding: 30px 100px;
+}
+
+.headingContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.headingContainer > h1 {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 35px;
+  font-weight: 100;
+  text-align: left;
+}
+
+.headingContainer > img {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+}
+
+.inputsContainer {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }

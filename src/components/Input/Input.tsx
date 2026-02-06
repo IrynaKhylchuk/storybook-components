@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 
 import "./Input.css";
+import clear from "../../assets/clear.svg";
+import eye_password from "../../assets/eye_password.svg";
+import eye_password_hide from "../../assets/eye_password_hide.svg";
 
 export interface InputProps {
   type?: "text" | "password" | "number";
@@ -47,9 +50,8 @@ export const Input = ({
         <button
           className="button clearButton"
           onClick={() => setValue("")}
-          disabled={!value}
         >
-          X
+          <img src={clear} alt="clear input button" />
         </button>
       )}
       {isPassword && (
@@ -58,7 +60,11 @@ export const Input = ({
           onClick={() => setShowPassword(!showPassword)}
           className="button visibilityButton"
         >
-          👁
+          {showPassword ? (
+            <img src={eye_password} alt="show password" />
+          ) : (
+            <img src={eye_password_hide} alt="hide password" />
+          )}
         </button>
       )}
     </div>

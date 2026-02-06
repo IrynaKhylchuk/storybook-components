@@ -1,25 +1,27 @@
 .inputContainer {
   position: relative;
-  display: inline-block;
+  width: 308px;
 }
 
 .input {
-  width: 300px;
-  padding: 8px 30px 8px 16px;
+  width: 260px;
+  height: 45px;
+  padding: 0 30px 0 16px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 18px;
   color: #181818;
-  border: 1px solid #a5a5a5;
-  border-radius: 6px;
-  box-shadow: 0 0 3px #777777;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 0 3px #ffffff;
+  background-color: #f3f3f3;
 }
 
 .input:hover {
-  border: 1px solid #8f8f8f;
+  border: 1px solid #e9e9e9;
 }
 
 .input:focus {
-  border: 1px solid #707070;
+  border: 1px solid #d3d3d3;
   outline: none;
 }
 
@@ -27,10 +29,15 @@
   position: absolute;
   top: 0;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
   border: 1px solid transparent;
   background-color: transparent;
   cursor: pointer;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 
 button:disabled,
@@ -42,9 +49,15 @@ button:disabled:hover {
 
 .clearButton {
   right: 0px;
-  padding: 8px 16px 8px 8px;
-  border-radius: 0 5px 5px 0;
-  color: #777777;
+  height: 47px;
+  width: 47px;
+  border-radius: 0 8px 8px 0;
+  position: absolute;
+}
+
+.clearButton > img {
+  height: 18px;
+  width: 18px;
 }
 
 .clearButton:hover {
@@ -56,8 +69,14 @@ button:disabled:hover {
 }
 
 .visibilityButton {
-  padding: 6px 0;
-  color: #929292;
+  height: 47px;
+  width: 37px;
+  position: absolute;
+}
+
+.visibilityButton > img {
+  height: 18px;
+  width: 18px;
 }
 
 input::-webkit-outer-spin-button,
@@ -68,4 +87,5 @@ input::-webkit-inner-spin-button {
 
 input[type="number"] {
   -moz-appearance: textfield;
+  appearance: textfield;
 }
