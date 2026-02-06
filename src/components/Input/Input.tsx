@@ -6,12 +6,16 @@ export interface InputProps {
   type?: "text" | "password" | "number";
   clearable?: boolean;
   placeholder?: string;
+  id?: string;
+  name?: string;
 }
 
 export const Input = ({
   type = "text",
   clearable = false,
-  placeholder
+  placeholder,
+  name,
+  id
 }: InputProps) => {
   const [value, setValue] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -31,6 +35,8 @@ export const Input = ({
   return (
     <div className="inputContainer">
       <input
+        id={id}
+        name={name}
         className="input"
         type={inputType}
         value={value}
