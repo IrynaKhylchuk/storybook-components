@@ -4,7 +4,7 @@ import type { MenuItem } from "./MenuItem/MenuItem";
 import { MenuItemComponent } from "./MenuItem/MenuItem";
 
 import menuIcon from "../../assets/menu.svg";
-import components from "../../assets/components.svg"
+import components from "../../assets/components.svg";
 import "./SidebarMenu.css";
 
 interface SidebarMenuProps {

@@ -47,10 +47,7 @@ export const Input = ({
         placeholder={placeholder}
       />
       {clearable && (
-        <button
-          className="button clearButton"
-          onClick={() => setValue("")}
-        >
+        <button className="button clearButton" onClick={() => setValue("")}>
           <img src={clear} alt="clear input button" />
         </button>
       )}
